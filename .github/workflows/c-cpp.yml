@@ -1,0 +1,21 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Install dependencies
+      run: sudo apt-get install python3 ninja-build meson
+    - uses: actions/checkout@v4
+    - name: configure
+      run: meson setup build --debug
+    - name: Build
+      run: cd build && meson compile
