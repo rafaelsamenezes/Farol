@@ -14,4 +14,4 @@ At present, Farol is focused on research and laying foundational groundwork for 
 
 ## Important Note
 
-If you are looking for a mature and fully featured software verifier today, the established tools ESBMC or CBMC are recommended. Farol is a long-term academic initiative and not currently intended as a drop-in replacement.
+If you are looking for a mature and fully featured software verifier today, you should go for ESBMC/CBMC.
