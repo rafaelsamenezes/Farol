@@ -22,10 +22,6 @@ impl Irept {
             comments: HashMap::new(),
         }
     }
-
-    pub fn to_string(&self) -> String {
-        return "asd".to_owned();
-    }
 }
 
 struct IreptDisplay<'a> {
@@ -513,30 +509,6 @@ mod tests {
 
         assert_eq!(irept.subt.len(), 0);
         assert_eq!(cloned.subt.len(), 1);
-    }
-
-    // ============================================================================
-    // Display/ToString Tests
-    // ============================================================================
-
-    #[test]
-    fn test_to_string_returns_string() {
-        let mut interner = setup_interner();
-        let irept = Irept::new("test", &mut interner);
-
-        let result = irept.to_string();
-        assert!(!result.is_empty());
-    }
-
-    #[test]
-    fn test_to_string_consistency() {
-        let mut interner = setup_interner();
-        let irept = Irept::new("test", &mut interner);
-
-        let result1 = irept.to_string();
-        let result2 = irept.to_string();
-
-        assert_eq!(result1, result2);
     }
 
     // ============================================================================
