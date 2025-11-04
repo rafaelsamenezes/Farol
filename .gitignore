@@ -56,3 +56,7 @@ dkms.conf
 
 # some meson stuff
 .cache
+
+# Added by cargo
+
+/target
