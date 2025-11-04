@@ -6,7 +6,6 @@ use string_container::StringInterner;
 
 #[derive(Clone, Debug)]
 pub struct Irept {
-    // TODO: This should be references and not copies!
     pub id: usize,
     pub subt: Vec<Rc<Irept>>,
     pub named_subt: HashMap<usize, Rc<Irept>>,
