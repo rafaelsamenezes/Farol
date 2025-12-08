@@ -1,4 +1,4 @@
-name: C/C++ CI
+name: Build and test Farol
 
 on:
   push:
@@ -15,3 +15,5 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build
       run: gcc nob.c -o nob && ./nob
+    - name: Test
+      run: ./build/farol
