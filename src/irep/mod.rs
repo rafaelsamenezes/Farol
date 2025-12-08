@@ -31,7 +31,6 @@ impl StringInterner {
     }
 }
 
-
 #[derive(Clone, Debug)]
 pub struct Irept {
     pub id: usize,
