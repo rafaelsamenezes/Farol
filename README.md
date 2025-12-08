@@ -6,7 +6,7 @@ At present, Farol is focused on research and laying foundational groundwork for 
 
 ## Development
 
-- Use any C compiler to build `nob.c` and execute it, e.g.: `gcc nob.c -o nob && nob`.
+- Use any C compiler to build `nob.c` and execute it, e.g.: `gcc nob.c -o nob && ./nob`.
 - Farol will be inside `build/farol`.
 
 Descriptions and issues are tracked on `doc.org`.
