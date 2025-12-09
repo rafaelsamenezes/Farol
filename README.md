@@ -4,12 +4,15 @@ Farol is an experimental, open-source project with the goal of developing a free
 
 At present, Farol is focused on research and laying foundational groundwork for CProver techniques.
 
-## Development
+## Quick start
 
-- Use any C compiler to build `nob.c` and execute it, e.g.: `gcc nob.c -o nob && ./nob`. Tests can be run with `./nob tests`.
-- Farol will be inside `build/farol`.
-
-Descriptions and issues are tracked on `doc.org`.
+```sh
+git clone https://github.com/rafaelsamenezes/Farol.git
+cd Farol
+cc nob.c -o nob && ./nob
+./nob test # optional test running
+./build/farol
+```
 
 ## Project Milestones
 
