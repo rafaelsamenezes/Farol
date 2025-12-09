@@ -16,4 +16,4 @@ jobs:
     - name: Build
       run: gcc nob.c -o nob && ./nob
     - name: Test
-      run: ./build/farol
+      run: ./nob test
