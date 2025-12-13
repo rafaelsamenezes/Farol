@@ -15,12 +15,13 @@ typedef struct {
   size_t length;
 } string_interner;
 
-uint64_t string_interner_tests();
 
 string_interner *interner_create(void);
 void interner_destroy(string_interner *it);
 uint64_t interner_intern(string_interner *it, const char *key);
 
+
+uint64_t string_interner_tests();
 #ifdef STRING_INTERNER_IMPL
 
 #include <stdio.h>
@@ -31,9 +32,9 @@ string_interner *interner_create(void) {
   string_interner *it = (string_interner *)malloc(sizeof(*it));
   if (!it)
     return NULL;
-  it->capacity = 16;
+  it->capacity = 128;
   it->length = 0;
-  it->entries = (intern_entry *)calloc(16, sizeof(intern_entry));
+  it->entries = (intern_entry *)calloc(it->capacity, sizeof(intern_entry));
   return it->entries ? it : (free(it), (string_interner *)NULL);
 }
 

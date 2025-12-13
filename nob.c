@@ -14,7 +14,6 @@ uint64_t run_tests() {
   return errors;
 }
 
-
 int main(int argc, char **argv) {
   NOB_GO_REBUILD_URSELF(argc, argv);
 
@@ -28,8 +27,10 @@ int main(int argc, char **argv) {
     return 1;
   Nob_Cmd cmd = {0};
 
-  nob_cmd_append(&cmd, "cc", "-Wall", "-Wextra", "-o", BUILD_FOLDER "farol",
-                 SRC_FOLDER "main.c");
+  nob_cc(&cmd);
+  nob_cc_flags(&cmd);
+  nob_cc_output(&cmd, BUILD_FOLDER "farol");
+  nob_cc_inputs(&cmd, SRC_FOLDER "main.c");
 
   if (!nob_cmd_run(&cmd))
     return 1;
